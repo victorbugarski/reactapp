@@ -1,4 +1,12 @@
 import React from 'react'
+import Icon from '../assets/Logos/icon.svg'
+import CostIcon from '../assets/Logos/cost icon.svg'
+import RegularIcon from '../assets/Logos/regular icon.svg'
+import DataIcon from '../assets/Logos/data icon.svg'
+import SupportIcon from '../assets/Logos/support icon.svg'
+import TopIcon from '../assets/Logos/top icon.svg'
+import Iphone3 from '../assets/Logos/iphone3.svg'
+
 
 const Features = () => {
   return (
@@ -16,7 +24,7 @@ const Features = () => {
                 
                 <div className="nedre-text">
                     <div className="features">
-                        <img src="Logos/icon.svg" alt="" className="icon"/>
+                        <img src={Icon} alt="" className="icon"/>
                         <div className="text">
                             <h3>Easy Payments</h3>
                             <p>Id mollis consectetur congue egestas egestas suspendisse blandit justo.</p>
@@ -24,7 +32,7 @@ const Features = () => {
                     </div>
                     
                     <div className="features">
-                        <img src="Logos/cost icon.svg" alt="" className="icon"/>
+                        <img src={CostIcon} alt="" className="icon"/>
                         <div className="text">
                             <h3>Cost statistics</h3>
                             <p>Mattis urna ultricies non amet, purus in auctor non. Odio vulputate ac nibh.</p>
@@ -32,7 +40,7 @@ const Features = () => {
                     </div>
 
                     <div className="features">
-                        <img src="Logos/regular icon.svg" alt="" className="icon"/>
+                        <img src={RegularIcon} alt="" className="icon"/>
                         <div className="text">
                             <h3>Regular Cashback</h3>
                             <p>Sit facilisis dolor arcu, fermentum vestibulum arcu elementum imperdiet eleifend.</p>
@@ -40,7 +48,7 @@ const Features = () => {
                     </div>
 
                     <div className="features">
-                        <img src="Logos/data icon.svg" alt="" className="icon"/>
+                        <img src={DataIcon} alt="" className="icon"/>
                         <div className="text">
                             <h3>Data Security</h3>
                             <p>Augue pulvinar justo, fermentum fames aliquam accumsan vestibulum non.</p>
@@ -48,7 +56,7 @@ const Features = () => {
                     </div>
 
                     <div className="features">
-                        <img src="Logos/support icon.svg" alt="" className="icon"/>
+                        <img src={SupportIcon} alt="" className="icon"/>
                         <div className="text">
                             <h3>Support 24/7</h3>
                             <p>A elementum, imperdiet enim, pretium etiam facilisi in aenean quam mauris.</p>
@@ -56,7 +64,7 @@ const Features = () => {
                     </div>
 
                     <div className="features">
-                        <img src="Logos/top icon.svg" alt="" className="icon"/>
+                        <img src={TopIcon} alt="" className="icon"/>
                         <div className="text">
                             <h3>Top Standards</h3>
                             <p>Faucibus cursus maecenas lorem cursus nibh. Sociis sit risus id. Sit facilisis dolor arcu.</p>
@@ -84,7 +92,7 @@ const Features = () => {
                 
                 
                  <div className="iphone">
-                 <img className="your-card" src="Logos/iphone3.svg" alt=""/>
+                 <img className="your-card" src={Iphone3} alt=""/>
                  </div>
                  
             </div>
