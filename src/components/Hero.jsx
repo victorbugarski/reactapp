@@ -1,4 +1,8 @@
 import React from 'react'
+import AppStore from '../assets/Logos/Appstore.svg'
+import GooglePlay from '../assets/Logos/GooglePlay.svg'
+import MyBudget from '../assets/Logos/iphone-mybudget.svg'
+import Iphone from '../assets/Logos/iphone.svg'
 
 const Hero = () => {
   return (
@@ -13,8 +17,8 @@ const Hero = () => {
             <div className="content">
                 <p>We offer you a new generation of the mobile banking. Save, spend & manage money in your pocket.</p>
                 <div className="buttons">
-                    <a className="btn-download-app" href="#"><img src="Logos/Appstore.svg"/></a>
-                    <a className="btn-download-app" href="#"><img src="Logos/Googleplay.svg"/></a>
+                    <a className="btn-download-app" href="#"><img src={AppStore}/></a>
+                    <a className="btn-download-app" href="#"><img src={GooglePlay}/></a>
                 </div>
 
                 <a href="#" className="discover-more">
@@ -26,8 +30,8 @@ const Hero = () => {
             </div>
 
             <div className="images">
-                <img className="img-back" src="Logos/iphone-mybudget.svg" alt="iphone my budget"/>
-                <img className="img-front" src="Logos/iphone.svg" alt="iphone"/>
+                <img className="img-back" src={MyBudget} alt="iphone my budget"/>
+                <img className="img-front" src={Iphone} alt="iphone"/>
             </div>
         </div>
 
