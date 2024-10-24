@@ -1,4 +1,6 @@
 import React from 'react'
+import Recension from '../assets/Logos/recension1.svg'
+import Recension1 from '../assets/Logos/recension2.svg'
 
 const Clients = () => {
   return (
@@ -10,8 +12,8 @@ const Clients = () => {
         </div>
 
             <div className="bilder">
-                <img src="Logos/recension1.svg" alt="" className="bilder"/>
-                <img src="Logos/recension2.svg" alt="" className="bilder"/>
+                <img src={Recension} alt="" className="bilder"/>
+                <img src={Recension1} alt="" className="bilder"/>
             </div>
 
         
