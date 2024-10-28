@@ -33,7 +33,6 @@ const Howitworks = () => {
             </div>
            
            
-           
         </section>
     </div>
   )

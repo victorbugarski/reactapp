@@ -4,6 +4,7 @@
     --color-dark: #0B0F19  ;
     --color-primary: #6366F1 ;
     --color-gray600: #9397ad ;
+    --color-gray200: #EFF2FC ;
     --color-white: #ffffff ;
     --color-gray300: #e2e5f1 ;
     --color-gray900: #0b0f19;
@@ -16,6 +17,32 @@
 
     --container-padding: 1rem;
     --transition-time: all 0,2s;
+
+}
+
+:root[data-theme="light"] {
+    --color-bg: (var(--color-white));
+    --color-bg-secondary: (var(--color-gray100));
+    --color-white-to-gray: (var(--color-white));
+    --accordion-background: #fff;
+
+    --color-text-heading: (var(--color-gray900));
+    --color-text-heading-2: (var(--color-gray800));
+    --color-text: (var(--color-gray600));
+    --border-color: (var(--color-gray300));
+    --btn-store-bg: (var(--color-gray900));
+}
+
+:root[data-theme="dark"] {
+    --color-bg: (var(--color-gray900));
+    --color-bg-secondary: #ffffff04;
+    --color-white-to-gray: rgba(255, 255, 255, 0.08);
+    --color-text-heading: (var(--color-white));
+    --color-text-heading-2: (var(--color-gray100));
+    --color-text: (var(--color-gray300));
+    --border-color: rgba(255, 255, 255, 0.08);
+    --btn-store-bg: (var(--color-gray200));
+    --accordion-background: rgba(255, 255, 255, 0.04);
 }
 
 
@@ -36,6 +63,16 @@ body {
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
+}
+
+.light-theme {
+    background-color: #fff;
+    color: black;
+}
+
+.dark-theme {
+    background-color: black;
+    color: white;
 }
 
 .wrapper {
@@ -185,6 +222,31 @@ a:hover {
     border-radius: 50px;
 }
 
+.toggle-switch + label::before {
+    content: "";
+    height: 1em;
+    width: 2em;
+    border-radius: 1em;
+    background-color: var(--color-green);
+    margin-right: 0em;
+    transition: background-color 250ms ease-in-out;
+}
+
+.toggle-switch + label::after {
+    content: "";
+    height: 0.8em;
+    width: 0.8em;
+    border-radius: 1em;
+    background-color: #6366F1;
+    position: absolute;
+    left: 0.2em;
+    transition: background-color 250ms ease-in-out, transform 250ms ease-in-out;
+}
+
+.toggle-switch:checked + label::after {
+    transform: translateX(100%);
+}
+
 .navbar {
     display: none;
 }
@@ -195,10 +257,19 @@ a:hover {
     text-decoration: none; 
 }
 
+.nav-link-1 {
+    color: var(--color-dark);
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 2rem;   
+}
+
 .nav-link:hover {
     color: var(--color-primary);
     text-decoration: underline;
 }
+
+
 
 .active {
     color: var(--color-primary);

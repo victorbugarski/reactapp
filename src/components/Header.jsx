@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
 import LogoType from '../assets/Logos/Link.svg'
+import DarkMode from './DarkMode';
 
-const Header = () => {
+    const Header = () => {
   return (
     <div>
       <header>
@@ -11,16 +12,10 @@ const Header = () => {
     
                 <nav id="main-menu" className="navbar">
                     <a className="nav-link" href="#">Features</a>
+                    <a className="nav-link-1" href="#">Contact</a>
                 </nav>
-    
-                <div id="darkmode-toggle-switch" className="btn-toggle-switch">
-                    <span className="label">Dark mode</span>
-                    <label htmlFor="Dark mode-switch" className="toggle-switch">
-                        <input id="Dark mode-switch" type="checkbox"/>
-                        <span className="slider round"></span>
-    
-                    </label>
-                </div>
+
+                <DarkMode />
     
                 <a id="auth-signin" href="#" className="btn-primary">
                     <i className="fa-thin fa-user-large"></i>

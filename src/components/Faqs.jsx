@@ -94,9 +94,8 @@ const Faqs = () => {
 
         </div>
 
-
-
-    </section>
+     </section>
+     
     </div>
   )
 }
