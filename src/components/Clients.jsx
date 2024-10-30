@@ -12,8 +12,8 @@ const Clients = () => {
         </div>
 
             <div className="bilder">
-                <img src={Recension} alt="" className="bilder"/>
-                <img src={Recension1} alt="" className="bilder"/>
+                <img id='recension1' src={Recension} alt=""/>
+                <img id='recension2'  src={Recension1} alt=""/>
             </div>
 
         

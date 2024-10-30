@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
-:root {
+/* :root {
     --color-dark: #0B0F19  ;
     --color-primary: #6366F1 ;
     --color-gray600: #9397ad ;
@@ -17,33 +17,100 @@
 
     --container-padding: 1rem;
     --transition-time: all 0,2s;
+} */
 
-}
-
-:root[data-theme="light"] {
-    --color-bg: (var(--color-white));
-    --color-bg-secondary: (var(--color-gray100));
-    --color-white-to-gray: (var(--color-white));
+[data-theme="light"] {
+    --color-bg: var(--color-white);
+    --color-bg-secondary: var(--color-gray100);
+    --color-white-to-gray: var(--color-white);
     --accordion-background: #fff;
 
-    --color-text-heading: (var(--color-gray900));
-    --color-text-heading-2: (var(--color-gray800));
-    --color-text: (var(--color-gray600));
-    --border-color: (var(--color-gray300));
-    --btn-store-bg: (var(--color-gray900));
-}
+    --color-text-heading: var(--color-gray900);
+    --color-text-heading-2: var(--color-gray800);
+    --color-text: black;
+    --border-color: var(--color-gray300);
+    --btn-store-bg: var(--color-gray900);
+
+   
+        --color-dark: #0B0F19  ;
+        --color-primary: #6366F1 ;
+        --color-gray600: #9397ad ;
+        --color-gray200: #EFF2FC ;
+        --color-white: #ffffff ;
+        --color-gray300: #e2e5f1 ;
+        --color-gray900: #0b0f19;
+        --color-gray700: #565973; 
+        --color-gray100: #f3f6ff;
+        --color-gray500: #b4b7c9;
+        --color-gray400: #d4d7e5;
+        --color-gray800: #33354d;
+        --color-green: #22c55e;
+    
+        --container-padding: 1rem;
+        --transition-time: all 0,2s;
+    }
 
 :root[data-theme="dark"] {
-    --color-bg: (var(--color-gray900));
+    --color-bg: var(--color-gray900);
     --color-bg-secondary: #ffffff04;
     --color-white-to-gray: rgba(255, 255, 255, 0.08);
-    --color-text-heading: (var(--color-white));
-    --color-text-heading-2: (var(--color-gray100));
-    --color-text: (var(--color-gray300));
+    --color-text-heading: var(--color-white);
+    --color-text-heading-2: var(--color-gray100);
+    --color-text: var(--color-gray300);
     --border-color: rgba(255, 255, 255, 0.08);
-    --btn-store-bg: (var(--color-gray200));
+    --btn-store-bg: var(--color-gray200);
     --accordion-background: rgba(255, 255, 255, 0.04);
+
+    
+        --color-dark: #0B0F19  ;
+        --color-primary: #6366F1 ;
+        --color-gray600: #9397ad ;
+        --color-gray200: #EFF2FC ;
+        --color-white: #ffffff ;
+        --color-gray300: #e2e5f1 ;
+        --color-gray900: #0b0f19;
+        --color-gray700: #565973; 
+        --color-gray100: rgb(243, 246, 255, 0.059);
+        --color-gray500: #b4b7c9;
+        --color-gray400: #d4d7e5;
+        --color-gray800: #33354d;
+        --color-green: #22c55e;
+    
+        --container-padding: 1rem;
+        --transition-time: all 0,2s;
+    }
+
+    body {
+        background-color: var(--color-bg);
+        color: var(--color-text);
+    }
+
+
+
+/* [data-theme="light"] {
+    --color-bg: var(--color-white);
+    --color-bg-secondary: var(--color-gray100);
+    --color-white-to-gray: var(--color-white);
+    --accordion-background: #fff;
+
+    --color-text-heading: var(--color-gray900);
+    --color-text-heading-2: var(--color-gray800);
+    --color-text: var(--color-gray600);
+    --border-color: var(--color-gray300);
+    --btn-store-bg: var(--color-gray900);
 }
+
+[data-theme="dark"] {
+    --color-bg: var(--color-gray900);
+    --color-bg-secondary: #ffffff04;
+    --color-white-to-gray: rgba(255, 255, 255, 0.08);
+    --color-text-heading: var(--color-white);
+    --color-text-heading-2: var(--color-gray100);
+    --color-text: var(--color-gray300);
+    --border-color: rgba(255, 255, 255, 0.08);
+    --btn-store-bg: var(--color-gray200);
+    --accordion-background: rgba(255, 255, 255, 0.04); 
+} */
 
 
 
@@ -63,16 +130,6 @@ body {
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
-}
-
-.light-theme {
-    background-color: #fff;
-    color: black;
-}
-
-.dark-theme {
-    background-color: black;
-    color: white;
 }
 
 .wrapper {
@@ -155,7 +212,6 @@ a:hover {
     align-items: center;
     border-radius: 50%;
     border: 1px solid var(--color-gray700);
-    background-color: var(--color-white);
 }
 
 .btn-toggle-switch {
@@ -255,6 +311,7 @@ a:hover {
     color: var(--color-dark);
     font-weight: 600;
     text-decoration: none; 
+    color: var(--color-text);
 }
 
 .nav-link-1 {
@@ -262,6 +319,7 @@ a:hover {
     font-weight: 600;
     text-decoration: none;
     margin-left: 2rem;   
+    color: var(--color-text);
 }
 
 .nav-link:hover {
@@ -472,6 +530,7 @@ footer {
 
         .discover-more {
             color: var(--color-dark);
+            color: var(--color-text);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -641,6 +700,7 @@ h2 {
 .text-nedre {
     h3 {
     color: var(--color-gray900);
+    color: var(--color-text);
     font-size: 24px;
     font-weight: 800;     
     }
@@ -678,6 +738,7 @@ h2 {
         color: var(--color-gray900);
         font-size: 32px;
         font-weight: 800;
+        color: var(--color-text);
     }
 
     .p-1 {
@@ -742,6 +803,7 @@ h2 {
         color: var(--color-gray900);
         font-size: 32px;
         font-weight: 800;
+        color: var(--color-text);
     }
 
   .texter {
@@ -782,6 +844,7 @@ h2 {
         font-size: 40px;
         font-weight: 800;
         color: var(--color-gray900);
+        color: var(--color-text);
     }
 
     .bilder {
@@ -793,7 +856,6 @@ h2 {
 }
 
 .subscribe {
-    background-color: var(--color-gray100);
     display: flex;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
@@ -808,11 +870,13 @@ h2 {
         align-items: center;
         margin-right: 5rem;
         margin-left: 5rem;
+        background-color: var(--color-gray100);
+        padding-left: 10rem;
+        padding-right: 10rem;
     }
 
     .klockan {
         display: flex;
-        margin-right: 6rem;
     }
 
     .email {
@@ -832,6 +896,7 @@ h2 {
     }
 
     .input {
+        background-color: var(--color-gray100);
         padding: 10px 20px;
         font-size: 16px;
         font-weight: 400;
@@ -866,6 +931,7 @@ h2 {
             font-weight: 800;
             color: var(--color-gray900);
             margin-left: 5rem;
+            color: var(--color-text);
         }
 
         p {
@@ -1008,7 +1074,7 @@ h2 {
             border: none;
             background-color: var(--color-primary);
             position: absolute;
-            bottom: 2rem;
+            bottom: 1rem;
             left: -2.7rem;
         }
 
