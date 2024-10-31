@@ -181,7 +181,6 @@ a:hover {
 }
 
 .btn-download-app {
-    background-color: var(--color-dark);
     color: var(--color-white);
     border-radius: 8px;
     padding: 12px 25px;

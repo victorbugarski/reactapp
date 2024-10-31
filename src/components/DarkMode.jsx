@@ -6,6 +6,11 @@ import Imgdark from '../assets/Logos/recension1-dark.svg'
 import Imgdark2 from '../assets/Logos/recension2-dark.svg'
 import Silicondark from '../assets/Logos/Link-dark.svg'
 import Siliconlight from '../assets/Logos/Link.svg'
+import Googleplaylight from '../assets/Logos/googleplay-light.svg'
+import Googleplaydark from '../assets/Logos/googleplay-dark.svg'
+import Appstorelight from '../assets/Logos/appstore-light.svg'
+import Appstoredark from '../assets/Logos/appstore-dark.svg'
+
 
     
   const DarkMode = () => {
@@ -47,6 +52,15 @@ import Siliconlight from '../assets/Logos/Link.svg'
         const logo = document.getElementById('logo');
         if (logo) {
             logo.src = isDarkMode ? Silicondark : Siliconlight;
+        }
+
+        const appStoreLogo = document.getElementById('appStoreLogo');
+        if (appStoreLogo) {
+            appStoreLogo.src = isDarkMode ? Appstoredark : Appstorelight;
+        }
+        const googlePlayLogo = document.getElementById('googlePlayLogo');
+        if (googlePlayLogo) {
+            googlePlayLogo.src = isDarkMode ? Googleplaydark : Googleplaylight;
         }
 
     }, [isDarkMode])
