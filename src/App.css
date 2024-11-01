@@ -1009,13 +1009,10 @@ h2 {
     }
 
     .container-8 {
-        display: grid;
-        justify-content: center;
-        align-items: center;
         padding-bottom: 5rem;
+        flex: 2;
 
         .item {
-            background-color: #ddd;
             border: none;
             box-shadow: 1px 1px 1px 1px solid;
             margin-bottom: 5px;
@@ -1026,22 +1023,25 @@ h2 {
         }
 
         .question {
-        display: grid;
+        display: flex;
         grid-template-columns: auto auto;
         justify-content: space-between;
         align-items: center;
         width: 100%;
         padding: 20px;
         font-size: 16px;
-        background-color: #fff;
         border: none;
         font-weight: 600;
         color: var(--color-gray900);
         box-shadow: 3px 3px var(--color-gray100);
+        background-color: rgb(243, 246, 255, 0.059);
+        color: var(--color-text);
+        
         
 
             .arrow-1 {
                 color: var(--color-gray800);
+                color: var(--color-text);
             }
 
         .btn-circle {
@@ -1054,6 +1054,7 @@ h2 {
             font-size: 16px;
             font-weight: 600;
             color: var(--color-gray900);
+            color: var(--color-text);
         }
 
         .p {
@@ -1061,6 +1062,7 @@ h2 {
             font-weight: 400;
             text-align: left;
             color: var(--color-gray700);
+            display: grid;
         }
 
         .btn-circle-1 {
@@ -1072,9 +1074,8 @@ h2 {
             border-radius: 50%;
             border: none;
             background-color: var(--color-primary);
-            position: absolute;
-            bottom: 1rem;
-            left: -2.7rem;
+            position: relative;
+            top: 0.5rem;
         }
 
         .arrow-2 {

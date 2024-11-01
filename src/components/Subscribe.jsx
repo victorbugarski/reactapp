@@ -20,11 +20,14 @@ const Subscribe = () => {
         <div className="email">
         <form className="form" action="method" method="get">
         <img className="msg" src={Mail} alt=""/>
-        <input className="input" type="email" placeholder="Your Email"/>
-        <button className="knapp">Subscribe</button>
+        <input id="Mail" className="input" type="email" placeholder="Your Email"/>
+        <label htmlFor="Mail"></label>
+        <button type="Submit" className="knapp">Subscribe</button>
         
     </form>
        </div> 
+        
+  
 </div>
 
 

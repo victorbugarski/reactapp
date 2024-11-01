@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Faqs = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    
+    const toggleFaqs = (e) => {
+        e.preventDefault();
+        setIsOpen(!isOpen);
+    };
+
   return (
     <div>
 
 <section className="faqs">
+
         <div className="container-7">
 
             <h2>Any questions? <br/>Check out the FAQs</h2>
@@ -26,66 +34,113 @@ const Faqs = () => {
             </div>
         </div>
 
+
         <div className="container-8">
             <div className="item">
-                <button className="question">Is any of my personal information stored in the App?
+                <button className="question" onClick={toggleFaqs}>
+                    <div> 
+                    <h3 className="h3">Is any of my personal information stored in the App?</h3>
+                {isOpen && (
+                <div className="content">
+                    <p className="p">Lorem ipsum dolor sit amet.</p>
+            </div>
+            )}
+                    </div>
                 <a href="#" className="arrow-1">
                     <span className="btn-circle">
-                        <i className="fa-solid fa-chevron-down"></i>
+                        <i className={`fa-solid fa-chevron-${isOpen ? "up" : "down"}`}></i>
+                    </span>
+                </a>
+                </button>
+            </div>
+            
+            <div className="item">
+                <button className="question" onClick={toggleFaqs}>
+                    <div>
+                        <h3 className='h3'>What formats can I download my transaction history in?</h3>
+                {isOpen && (
+                <div className="content">
+                    <p className="p">Lorem ipsum dolor sit amet.</p>
+            </div>
+            )}
+                    </div>
+                <a href="#" className="arrow-1">
+                    <span className="btn-circle">
+                        <i className={`fa-solid fa-chevron-${isOpen ? "up" : "down"}`}></i>
                     </span>
                 </a>
                 </button>
             </div>
 
             <div className="item">
-                <button className="question">What formats can I download my transaction history in?
-                <a href="#" className="arrow-1">
-                    <span className="btn-circle">
-                        <i className="fa-solid fa-chevron-down"></i>
-                    </span>
-                </a>
-                </button>
-            </div>
-
-            <div className="item">
-                <button className="question">
+                <button className="question" onClick={toggleFaqs}>
                     <div>
                         <h3 className="h3">Can I schedule future transfers?</h3>
-                        <p className="p">Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
+            {isOpen && (
+                <div className="content">
+                <p className="p">
+                Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet <br/> pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan <br/> lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing <br/> euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.
+                </p>
+                </div>
+            )}
                     </div>
                 <a href="#" className="arrow-2">
                     <span className="btn-circle-1">
-                        <i className="fa-solid fa-chevron-up"></i>
+                        <i className={`fa-solid fa-chevron-${isOpen ? "up" : "down"}`}></i>
                     </span>
                 </a>
                 </button>
             </div>
 
             <div className="item">
-                <button className="question">When can I use Banking App services?
+                <button className="question" onClick={toggleFaqs}>
+                    <div>
+                        <h3 className="h3">When can I use Banking App services?</h3>
+                {isOpen && (
+                <div className="content">
+                    <p className="p">Lorem ipsum dolor sit amet.</p>
+            </div>
+            )}
+                    </div>
                 <a href="#" className="arrow-1">
                     <span className="btn-circle">
-                        <i className="fa-solid fa-chevron-down"></i>
+                        <i className={`fa-solid fa-chevron-${isOpen ? "up" : "down"}`}></i>
                     </span>
                 </a>
                 </button>
             </div>
 
             <div className="item">
-                <button className="question">Can I create my own password that is easy for me to remember?
+                <button className="question" onClick={toggleFaqs}>
+                    <div>
+                        <h3 className="h3">Can I create my own password that is easy for me to remember?</h3>
+                {isOpen && (
+                <div className="content">
+                    <p className="p">Lorem ipsum dolor sit amet.</p>
+            </div>
+            )}
+                    </div>
                 <a href="#" className="arrow-1">
                     <span className="btn-circle">
-                        <i className="fa-solid fa-chevron-down"></i>
+                        <i className={`fa-solid fa-chevron-${isOpen ? "up" : "down"}`}></i>
                     </span>
                 </a>
                 </button>
             </div>
 
             <div className="item">
-                <button className="question">What happens if I forget or lose my password?
+                <button className="question" onClick={toggleFaqs}>
+                    <div>
+                        <h3 className="h3">What happens if I forget or lose my password?</h3>
+                {isOpen && (
+                <div className="content">
+                    <p className="p">Lorem ipsum dolor sit amet.</p>
+            </div>
+            )}
+                    </div>
                 <a href="#" className="arrow-1">
                     <span className="btn-circle">
-                        <i className="fa-solid fa-chevron-down"></i>
+                        <i className={`fa-solid fa-chevron-${isOpen ? "up" : "down"}`}></i>
                     </span>
                 </a>
                 </button>
@@ -99,5 +154,4 @@ const Faqs = () => {
     </div>
   )
 }
-
 export default Faqs

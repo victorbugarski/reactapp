@@ -27,6 +27,7 @@ function App() {
       <Faqs />
       <Subscribe />
       <Footer />
+  
       
     </>
   )
