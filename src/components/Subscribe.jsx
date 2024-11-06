@@ -6,9 +6,13 @@ const Subscribe = () => {
 
 const [formData, setformData] = useState({ email: ''})
 
+const handleOK = () => {
+  setSubmitted(false)
+}
+
 const handleChange = (e) => {
-  const { Mail, value } = e.target
-  setformData({...formData, [Mail]: value})
+  const { name, value } = e.target
+  setformData({...formData, [name]: value})
 }
 
 const handleSubmit = async (e) => {
@@ -23,11 +27,11 @@ const handleSubmit = async (e) => {
   })
   
 if(res.ok){
-  const data = await res.text()
-  console.log(data)
+  // const data = await res.text()
+  console.log("Din validering lyckades!")
 } else {
-  const data = await res.json()
-  console.log(data)
+  // const data = await res.json()
+  console.log("Din validering misslyckades")
 }
 
   console.log()
@@ -51,9 +55,9 @@ if(res.ok){
         </div>
         
         <div className="email">
-        <form onSubmit={handleSubmit} className="form" action="method" method="get">
+        <form onSubmit={handleSubmit} className="form">
         <img className="msg" src={Mail} alt=""/>
-        <input id="Mail" className="input" name="email" value={FormData.email} onChange={handleChange} required type="email" placeholder="Your Email"/>
+        <input id="Mail" className="input" name="email" value={formData.email} onChange={handleChange} required type="email" placeholder="Your Email"/>
         <label htmlFor="Mail"></label>
         <button type="Submit" className="knapp">Subscribe</button>
         

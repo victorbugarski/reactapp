@@ -1086,3 +1086,8 @@ h2 {
         }
 
     }
+
+    .informationsbox {
+        background-color: green;
+        color: var(--color-text);
+    }
