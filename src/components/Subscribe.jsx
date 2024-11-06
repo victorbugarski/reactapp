@@ -1,9 +1,42 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Klocka from '../assets/Logos/klocka.svg'
 import Mail from '../assets/Logos/bx-envelope.svg'
 
 const Subscribe = () => {
-  return (
+
+const [formData, setformData] = useState({ email: ''})
+
+const handleChange = (e) => {
+  const { Mail, value } = e.target
+  setformData({...formData, [Mail]: value})
+}
+
+const handleSubmit = async (e) => {
+  e.preventDefault()
+
+  const res = await fetch('https://win24-assignment.azurewebsites.net/api/forms/subscribe', {
+    method: 'post',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+  })
+  
+if(res.ok){
+  const data = await res.text()
+  console.log(data)
+} else {
+  const data = await res.json()
+  console.log(data)
+}
+
+  console.log()
+
+// alert('Thank you!!')
+}
+
+
+    return (
     <div>
 
 <section className="subscribe">
@@ -18,9 +51,9 @@ const Subscribe = () => {
         </div>
         
         <div className="email">
-        <form className="form" action="method" method="get">
+        <form onSubmit={handleSubmit} className="form" action="method" method="get">
         <img className="msg" src={Mail} alt=""/>
-        <input id="Mail" className="input" type="email" placeholder="Your Email"/>
+        <input id="Mail" className="input" name="email" value={FormData.email} onChange={handleChange} required type="email" placeholder="Your Email"/>
         <label htmlFor="Mail"></label>
         <button type="Submit" className="knapp">Subscribe</button>
         
