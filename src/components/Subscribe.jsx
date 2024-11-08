@@ -6,10 +6,6 @@ const Subscribe = () => {
 
 const [formData, setformData] = useState({ email: ''})
 
-const handleOK = () => {
-  setSubmitted(false)
-}
-
 const handleChange = (e) => {
   const { name, value } = e.target
   setformData({...formData, [name]: value})
@@ -57,7 +53,7 @@ if(res.ok){
         <div className="email">
         <form onSubmit={handleSubmit} className="form">
         <img className="msg" src={Mail} alt=""/>
-        <input id="Mail" className="input" name="email" value={formData.email} onChange={handleChange} required type="email" placeholder="Your Email"/>
+        <input id="Mail" className="input" name="email" value={formData.email} onChange={handleChange} type="email" placeholder="Your Email"/>
         <label htmlFor="Mail"></label>
         <button type="Submit" className="knapp">Subscribe</button>
         

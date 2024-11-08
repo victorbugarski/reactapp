@@ -902,6 +902,7 @@ h2 {
         padding-left: 2rem;
         border-radius: 5px 0 0 5px;
         border: 1px solid rgba(128, 128, 128, 0.256);
+        color: var(--color-text);
     }
 
     .form {
@@ -1085,9 +1086,4 @@ h2 {
         }
         }
 
-    }
-
-    .informationsbox {
-        background-color: green;
-        color: var(--color-text);
     }
