@@ -1,24 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
-/* :root {
-    --color-dark: #0B0F19  ;
-    --color-primary: #6366F1 ;
-    --color-gray600: #9397ad ;
-    --color-gray200: #EFF2FC ;
-    --color-white: #ffffff ;
-    --color-gray300: #e2e5f1 ;
-    --color-gray900: #0b0f19;
-    --color-gray700: #565973; 
-    --color-gray100: #f3f6ff;
-    --color-gray500: #b4b7c9;
-    --color-gray400: #d4d7e5;
-    --color-gray800: #33354d;
-    --color-green: #22c55e;
-
-    --container-padding: 1rem;
-    --transition-time: all 0,2s;
-} */
-
 [data-theme="light"] {
     --color-bg: var(--color-white);
     --color-bg-secondary: var(--color-gray100);
@@ -645,6 +626,7 @@ h1{
         margin: 0;
         font-size: 22px;
         font-weight: bold;
+        color: var(--color-text);
     }
 
     .text p {
@@ -1161,3 +1143,5 @@ h2 {
             }
         }
     }
+
+    
